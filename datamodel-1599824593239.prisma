@@ -1,0 +1,24 @@
+type Lesson {
+  id: Int! @id
+  description: String!
+  displayTitle: String!
+  moduleId: Module!
+  title: String!
+  unit: [Unit]
+}
+
+type Module {
+  id: Int! @id
+  description: String!
+  displayTitle: String!
+  lesson: [Lesson]
+  title: String!
+}
+
+type Unit {
+  id: Int! @id
+  contents: String!
+  displayTitle: String!
+  lessonId: Lesson!
+  title: String!
+}
